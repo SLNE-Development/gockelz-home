@@ -61,7 +61,7 @@ export default function Home() {
 				<p className="text-muted-foreground text-xl text-center">
 					Schau doch mal auf meinem Twitch-Kanal vorbei!
 				</p>
-				<div className="left-0 w-1/2 h-0 relative pb-[30%]">
+				<div className="left-0 w-[95%] lg:w-1/2 h-0 relative pb-[60%] lg:pb-[30%]">
 					<iframe
 						name="twitch-embed"
 						title="Twitch Player"
