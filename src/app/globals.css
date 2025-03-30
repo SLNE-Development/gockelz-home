@@ -18,7 +18,9 @@
 
 @theme inline {
 	--color-gockelz: var(--gockelz);
+	--color-gockelz-light: var(--gockelz-light);
 	--color-background: var(--background);
+	--color-background-light: var(--background-light);
 	--color-foreground: var(--foreground);
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-sidebar-border: var(--sidebar-border);
@@ -53,12 +55,18 @@
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
+	--spacing-header-height: calc(var(--spacing) * 28);
+	--spacing-full-height-header-height: calc(
+		100vh - var(--spacing-header-height)
+	);
 }
 
 :root {
-	--gockelz: #5c16c5;
+	--gockelz: hsl(264, 80%, 43%);
+	--gockelz-light: hsl(264, 80%, 60%);
 	--radius: 0.625rem;
 	--background: hsl(263 80% 10%);
+	--background-light: hsl(263 80% 15%);
 	--foreground: hsl(0 0% 100%);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.129 0.042 264.695);
@@ -92,8 +100,10 @@
 }
 
 .dark {
-	--gockelz: #5c16c5;
+	--gockelz: hsl(264, 80%, 43%);
+	--gockelz-light: hsl(264, 80%, 60%);
 	--background: hsl(263 80% 10%);
+	--background-light: hsl(263 80% 15%);
 	--foreground: hsl(0 0% 0%);
 	--card: oklch(0.208 0.042 265.755);
 	--card-foreground: oklch(0.984 0.003 247.858);
