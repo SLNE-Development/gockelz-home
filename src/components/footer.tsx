@@ -1,7 +1,7 @@
+import { socials } from "@/links";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
-import { FaInstagram, FaTwitch, FaX, FaYoutube } from "react-icons/fa6";
 
 export function PageFooter() {
 	return (
@@ -29,31 +29,7 @@ export function PageFooter() {
 					{ title: "Datenschutz", href: "/datenschutz" },
 				]}
 			/>
-			<FooterCol
-				title="Social Media"
-				links={[
-					{
-						title: "Instagram",
-						href: "https://instagram.com/gockelz",
-						icon: FaInstagram,
-					},
-					{
-						title: "Twitter",
-						href: "https://twitter.com/gockelz",
-						icon: FaX,
-					},
-					{
-						title: "YouTube",
-						href: "https://youtube.com/@gockelz",
-						icon: FaYoutube,
-					},
-					{
-						title: "Twitch",
-						href: "https://twitch.tv/gockelz",
-						icon: FaTwitch,
-					},
-				]}
-			/>
+			<FooterCol title="Social Media" links={socials} />
 		</footer>
 	);
 }

@@ -1,14 +1,8 @@
 import { FullHeight } from "@/components/full-height";
+import { socials } from "@/links";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
-import {
-	FaDiscord,
-	FaInstagram,
-	FaTwitch,
-	FaX,
-	FaYoutube,
-} from "react-icons/fa6";
 
 export default function Home() {
 	return (
@@ -89,26 +83,13 @@ export default function Home() {
 				</p>
 
 				<div className="flex flex-row flex-wrap items-center justify-between gap-2 lg:gap-4">
-					<SocialButton
-						link="https://instagram.com/gockelz"
-						icon={FaInstagram}
-					/>
-					<SocialButton
-						link="https://twitter.com/gockelz"
-						icon={FaX}
-					/>
-					<SocialButton
-						link="https://youtube.com/@gockelz"
-						icon={FaYoutube}
-					/>
-					<SocialButton
-						link="https://twitch.tv/gockelz"
-						icon={FaTwitch}
-					/>
-					<SocialButton
-						link="https://discord.gg/gockelz"
-						icon={FaDiscord}
-					/>
+					{socials.map((socials, index) => (
+						<SocialButton
+							key={index}
+							link={socials.href}
+							icon={socials.icon}
+						/>
+					))}
 				</div>
 			</FullHeight>
 		</div>
